@@ -23,5 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "awesome_print"
   spec.add_development_dependency "pry"
 
-  spec.add_dependency('httparty', '~> 0.12.0')
+  spec.add_dependency 'httparty', '~> 0.12.0'
+  spec.add_dependency "ruby-hmac", '~> 0.4.0'
 end

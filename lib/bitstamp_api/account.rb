@@ -1,23 +1,23 @@
-# module BitstampAPI
+module BitstampAPI
 
-#   class Account < BitstampAPI::Net
+  class Account < BitstampAPI::Net
 
-#     def balance
+    def balance
+      self.class.get("#{BitstampAPI::BASE}/balance")
+    end
 
-#     end
+    def user_transactions(offset: 0, limit: 100, sort: "desc")
 
-#     def user_transactions(offset: 0, limit: 100, sort: "desc")
+    end
 
-#     end
+    def open_orders
 
-#     def open_orders
+    end
 
-#     end
+    def cancel_order(id: nil)
 
-#     def cancel_order(id: nil)
+    end
 
-#     end
+  end
 
-#   end
-
-# end
+end

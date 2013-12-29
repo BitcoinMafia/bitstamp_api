@@ -1,4 +1,5 @@
 require 'httparty'
+require 'hmac-sha2'
 require "bitstamp_api/data"
 require "bitstamp_api/account"
 require "bitstamp_api/limit_order"
