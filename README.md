@@ -1,6 +1,10 @@
 # BitstampApi
 
-TODO: Write a gem description
+Ruby Wrapper around https://www.bitstamp.net/api/
+
+Goal is the mirror the methods as close as possible, and then provide an abstraction layer on top of that.
+
+Work in progress.
 
 ## Installation
 
