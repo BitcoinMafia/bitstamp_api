@@ -1,0 +1,1 @@
+require 'bitstamp_api'
