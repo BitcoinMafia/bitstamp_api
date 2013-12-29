@@ -12,9 +12,15 @@ require "bitstamp_api/ripple"
 
 module BitstampAPI
 
+  # Set key defaults based on ENV vars
   mattr_accessor :api_key
+  self.api_key = ENV["BITSTAMP_API_KEY"]
+
   mattr_accessor :api_secret
+  self.api_secret = ENV["BITSTAMP_API_SECRET"]
+
   mattr_accessor :client_id
+  self.client_id = ENV["BITSTAMP_CLIENT_ID"]
 
   def self.configure
     yield(self)

@@ -2,7 +2,7 @@ module BitstampAPI::Account
   extend self
 
   def balance
-    BitstampAPI::Rest.post("/balance")
+    BitstampAPI::Rest.post("/balance/")
   end
 
   def user_transactions(offset: 0, limit: 100, sort: "desc")
@@ -14,11 +14,11 @@ module BitstampAPI::Account
   end
 
   def open_orders
-    BitstampAPI::Rest.post("/open_orders")
+    BitstampAPI::Rest.post("/open_orders/")
   end
 
   def cancel_order(id: nil)
-    BitstampAPI::Rest.post("/open_orders", params: {
+    BitstampAPI::Rest.post("/cancel_order/", params: {
       id: id
     })
   end

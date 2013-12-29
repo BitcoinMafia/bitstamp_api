@@ -8,18 +8,18 @@ module BitstampAPI::Rest
 
     signature = HMAC::SHA256.hexdigest(
       BitstampAPI.api_secret,
-      nonce + BitstampAPI.client_id + BitstampAPI.api_key
+      nonce.to_s + BitstampAPI.client_id + BitstampAPI.api_key
     ).upcase
 
     authentication_params = {
       key: BitstampAPI.api_key,
-      signature: signature,
-      nonce: nonce
+      nonce: nonce,
+      signature: signature
     }
 
     params = params.merge(authentication_params)
 
-    HTTParty.post("#{BASE}#{endpoint}", query: params)
+    HTTParty.post("#{BASE}#{endpoint}", body: params.to_query)
   end
 
   def get(endpoint, params: {})
