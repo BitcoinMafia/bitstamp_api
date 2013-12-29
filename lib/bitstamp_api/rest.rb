@@ -20,11 +20,17 @@ module BitstampAPI::Rest
     params = params.merge(authentication_params)
 
     # ensure / at end of endpoint
-    HTTParty.post("#{BASE}#{endpoint}", body: params.to_query)
+    response = HTTParty.post("#{BASE}#{endpoint}", body: params.to_query)
+
+    raise Error unless response.code === 200
+    return response
   end
 
   def get(endpoint, params: {})
     HTTParty.get("#{BASE}#{endpoint}", query: params)
+
+    raise Error unless response.code === 200
+    return response
   end
 
 end
