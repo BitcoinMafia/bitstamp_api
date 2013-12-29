@@ -5,7 +5,9 @@ module BitstampAPI
 
     format :json
 
-    def initialize
+
+    # Need to rebuild auth every call because of unique incr. nonce
+    def build_authentication_params
       nonce = Time.now.to_i
 
       signature = HMAC::SHA256.hexdigest(
