@@ -10,6 +10,8 @@ require "bitstamp_api/withdrawal"
 require "bitstamp_api/deposit"
 require "bitstamp_api/ripple"
 
+
+# DOCS: https://www.bitstamp.net/api/
 module BitstampAPI
 
   # Set key defaults based on ENV vars

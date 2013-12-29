@@ -6,7 +6,7 @@ module BitstampAPI::Account
   end
 
   def user_transactions(offset: 0, limit: 100, sort: "desc")
-    BitstampAPI::Rest.post("/user_transactions", params: {
+    BitstampAPI::Rest.post("/user_transactions/", params: {
       offset: offset,
       limit: limit,
       sort: sort
@@ -15,12 +15,6 @@ module BitstampAPI::Account
 
   def open_orders
     BitstampAPI::Rest.post("/open_orders/")
-  end
-
-  def cancel_order(id: nil)
-    BitstampAPI::Rest.post("/cancel_order/", params: {
-      id: id
-    })
   end
 
 end

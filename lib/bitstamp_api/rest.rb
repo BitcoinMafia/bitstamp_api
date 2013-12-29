@@ -19,6 +19,7 @@ module BitstampAPI::Rest
 
     params = params.merge(authentication_params)
 
+    # ensure / at end of endpoint
     HTTParty.post("#{BASE}#{endpoint}", body: params.to_query)
   end
 
