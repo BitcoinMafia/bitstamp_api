@@ -6,5 +6,7 @@ require "bitstamp_api/deposit"
 require "bitstamp_api/ripple"
 
 module BitstampAPI
-  # Your code goes here...
+
+  BASE = "https://www.bitstamp.net/api"
+
 end
