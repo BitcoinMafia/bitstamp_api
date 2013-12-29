@@ -1,33 +1,26 @@
-module BitstampAPI
+module BitstampAPI::Account
+  extend self
 
-  class Account < BitstampAPI::Base
+  def balance
+    BitstampAPI::Rest.post("/balance")
+  end
 
-    def balance
-      build_authentication_params()
-      self.class.post("#{BitstampAPI::BASE}/balance")
-    end
+  def user_transactions(offset: 0, limit: 100, sort: "desc")
+    BitstampAPI::Rest.post("/user_transactions", params: {
+      offset: offset,
+      limit: limit,
+      sort: sort
+    })
+  end
 
-    def user_transactions(offset: 0, limit: 100, sort: "desc")
-      build_authentication_params()
-      self.class.post("#{BitstampAPI::BASE}/user_transactions", query: {
-        offset: offset,
-        limit: limit,
-        sort: sort
-      })
-    end
+  def open_orders
+    BitstampAPI::Rest.post("/open_orders")
+  end
 
-    def open_orders
-      build_authentication_params()
-      self.class.post("#{BitstampAPI::BASE}/open_orders")
-    end
-
-    def cancel_order(id: nil)
-      build_authentication_params()
-      self.class.post("#{BitstampAPI::BASE}/cancel_order", query: {
-        id: id
-      })
-    end
-
+  def cancel_order(id: nil)
+    BitstampAPI::Rest.post("/open_orders", params: {
+      id: id
+    })
   end
 
 end
