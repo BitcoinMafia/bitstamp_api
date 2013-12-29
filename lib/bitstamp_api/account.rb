@@ -1,0 +1,3 @@
+module BitstampAPI::Account
+
+end

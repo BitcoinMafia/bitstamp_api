@@ -1,0 +1,3 @@
+module BitstampAPI::Withdrawal
+
+end

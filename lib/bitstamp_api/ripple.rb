@@ -1,0 +1,3 @@
+module BitstampAPI::Ripple
+
+end

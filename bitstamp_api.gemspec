@@ -5,7 +5,7 @@ require 'bitstamp_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "bitstamp_api"
-  spec.version       = BitstampApi::VERSION
+  spec.version       = BitstampAPI::VERSION
   spec.authors       = ["Scott Li"]
   spec.email         = ["scottli0101@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
