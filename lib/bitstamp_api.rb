@@ -13,11 +13,11 @@ module BitstampAPI
   BASE = "https://www.bitstamp.net/api"
 
   mattr_accessor :api_key
+  mattr_accessor :api_secret
   mattr_accessor :client_id
-  mattr_accessor :signature
 
   def self.configure
-    yield self
+    yield(self)
   end
 
 end

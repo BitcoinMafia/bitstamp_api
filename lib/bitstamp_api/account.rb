@@ -3,7 +3,9 @@ module BitstampAPI
   class Account < BitstampAPI::Base
 
     def balance
-      self.class.post("#{BitstampAPI::BASE}/balance")
+      self.class.post("#{BitstampAPI::BASE}/balance", query: {
+        nonce: Time.now.to_i
+      })
     end
 
     def user_transactions(offset: 0, limit: 100, sort: "desc")
