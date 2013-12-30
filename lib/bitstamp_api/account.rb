@@ -13,8 +13,4 @@ module BitstampAPI::Account
     })
   end
 
-  def open_orders
-    BitstampAPI::Rest.post("/open_orders/")
-  end
-
 end
