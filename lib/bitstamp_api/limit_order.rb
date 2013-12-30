@@ -1,7 +1,7 @@
 module BitstampAPI::LimitOrder
   extend self
 
-  def open
+  def open_orders
     BitstampAPI::Rest.post("/open_orders/")
   end
 

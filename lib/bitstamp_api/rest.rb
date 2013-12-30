@@ -27,7 +27,7 @@ module BitstampAPI::Rest
   end
 
   def get(endpoint, params: {})
-    HTTParty.get("#{BASE}#{endpoint}", query: params)
+    response = HTTParty.get("#{BASE}#{endpoint}", query: params)
 
     raise Error unless response.code === 200
     return response
