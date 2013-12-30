@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = BitstampAPI::VERSION
   spec.authors       = ["Scott Li"]
   spec.email         = ["scottli0101@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Bitstamp API Ruby Wrapper}
+  spec.description   = %q{Mirros Bitstamp API methods}
   spec.homepage      = ""
   spec.license       = "MIT"
 
